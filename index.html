@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>demo</title>
+		<link rel="stylesheet" href="ke/css/ke.css" />
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="ke/js/ke.js"></script>
+	</head>
+	<body class="container">
+		
+		
+		<div class="padding margin">
+			<h1>弹出层</h1>
+			<p><a href="#" id="ke-msg">ke.msg</a></p>
+			<p><a href="#" id="ke-confirm">ke.confirm</a></p>
+			
+		</div>
+		<script type="text/javascript">
+			$('#ke-msg').on('click',function(){
+				ke.msg('s');
+			});
+			$('#ke-confirm').on('click',function(){
+				ke.confirm('s');
+			});
+		</script>
+		
+		<div class="padding margin">
+			<h1>栅格</h1>
+			
+			<div class="row">
+				<div class="col-1 border padding fff">col-1</div>
+			</div>
+			<div class="row">
+				<div class="col-2 border padding fff">col-2</div>
+			</div>
+			<div class="row">
+				<div class="col-3 border padding fff">col-3</div>
+			</div>
+			<div class="row">
+				<div class="col-4 border padding fff">col-4</div>
+			</div>
+			<div class="row">
+				<div class="col-5 border padding fff">col-5</div>
+			</div>
+			<div class="row">
+				<div class="col-6 border padding fff">col-6</div>
+			</div>
+			<div class="row">
+				<div class="col-7 border padding fff">col-7</div>
+			</div>
+			<div class="row">
+				<div class="col-8 border padding fff">col-8</div>
+			</div>
+			<div class="row">
+				<div class="col-9 border padding fff">col-9</div>
+			</div>
+			<div class="row">
+				<div class="col-10 border padding fff">col-10</div>
+			</div>
+		</div>
+		
+		
+		<div class="padding margin">
+			<h1>自动平铺</h1>
+			
+			<ul class="flex">
+				<li>item</li>
+				<li>item</li>
+				<li>item</li>
+				<li>item</li>
+				<li>item</li>
+				<li>item</li>
+				<li>item</li>
+			</ul>
+		</div>
+		
+		
+		<div class="padding margin">
+			<h1>按钮</h1>
+			<button class="btn btn-a">按钮a</button>
+			<button class="btn btn-b">按钮b</button>
+			<button class="btn btn-c">按钮c</button>
+			<button class="btn btn-d">按钮d</button>
+			<button class="btn btn-e">按钮e</button>
+		</div>
+		
+		
+		
+		<div class="padding margin">
+			<h1>表单</h1>
+			
+			<div class="form-group">
+				<label class="label">标题</label>
+				<div class="form-control">
+					<input type="text" class="input max" />
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="label">帐号</label>
+				<div class="form-control inline">
+					<input type="text" class="input" />
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="label">性别</label>
+				<div class="form-control inline">
+					<label class="control"><input type="radio" />男</label>
+					<label class="control"><input type="radio" />女</label>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="label">地区</label>
+				<div class="form-control inline">
+					<select class="input">
+						<option>广西</option>
+						<option>广东</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="padding margin">
+			<h1>卡片</h1>
+			
+			<div class="card">
+				<div class="card-head">头部</div>
+				<div class="card-body">内容</div>
+				<div class="card-foot">底部</div>
+			</div>
+		</div>
+		
+		
+		<div class="padding margin">
+			<h1>列表</h1>
+			
+			<div class="list">
+				<div class="list-item">充数内容</div>
+				<div class="list-item">充数内容</div>
+				<div class="list-item">充数内容</div>
+				<div class="list-item">充数内容</div>
+				<div class="list-item">充数内容</div>
+				<div class="list-item">充数内容</div>
+				<div class="list-item">充数内容</div>
+				<div class="list-item">充数内容</div>
+				<div class="list-item">充数内容<span class="right i-red">100</span></div>
+			</div>
+		</div>
+	</body>
+</html>
