@@ -6,6 +6,20 @@ ke={
 		d.css({left:0,top:h});
 		d.animate({left:w+'px'},50);
 	},
+	close:function(index){
+		$('html').find('#ke-tip-'+index).remove();
+	},
+	load:function(){
+		var id=new Date().getTime();
+		$('html').append('<div id="ke-tip-'+id+'" class="ke-tip">'+ke.html+'</div>');
+		var $dom=$('#ke-tip-'+id+':last');
+		$dom.find('.dia').remove();
+		$dom.append('<i id="loading" class="fa fa-spinner fa-3x fa-spin" style="position:absolute;color:#00FF33"></i>');
+		ke.xwh($dom.find('#loading'));
+		$dom.css({display:'none'});
+		$dom.fadeIn(200);
+		return id;
+	},
 	confirm:function(content,ok,no){
 		var id=new Date().getTime();
 		$('html').append('<div id="ke-tip-'+id+'" class="ke-tip">'+ke.html+'</div>');
@@ -42,5 +56,14 @@ ke={
 			if(btn!==undefined) btn();
 		});
 		return id;
+	},
+	ajax:function(option){
+		var load=ke.load();
+		option.complete=function(){
+			ke.close(load);
+		};
+	    option.datatype=option.datatype===undefined ? 'json' : option.datatype;
+	    option.timeout=option.timeout===undefined ? 15000 : option.timeout;
+		$.ajax(option);
 	}
 };
