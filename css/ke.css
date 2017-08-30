@@ -1,40 +1,87 @@
-/*
-Error: Invalid CSS after "@include ": expected identifier, was ""../font/css/fo..."
-        on line 3 of ke.scss
+@charset "UTF-8";
+@import url(../font/css/font-awesome.min.css);
+html, body, ul, li, p, h1, h2, h3, h4, h5, hr { list-style: none; margin: 0; padding: 0; }
 
-1: @charset "UTF-8";
-2: 
-3: @include "../font/css/font-awesome.min.css";
-4: html,body,ul,li,p,h1,h2,h3,h4,h5,hr{
-5:     list-style: none;
-6:     margin: 0;
-7:     padding: 0;
-8: }
+body { font-family: "Helvetica Neue",Helvetica,STHeiTi,sans-serif; line-height: 1.5; font-size: 16px; color: #000; background-color: #f8f8f8; -webkit-user-select: none; -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; outline: 0; }
 
-Backtrace:
-ke.scss:3
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1207:in `expected'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1137:in `expected'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1132:in `tok!'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:238:in `include_directive'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:222:in `special_directive'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:197:in `directive'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:684:in `block_child'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:677:in `block_contents'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:125:in `stylesheet'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:41:in `parse'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/engine.rb:406:in `_to_tree'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/engine.rb:298:in `render_with_sourcemap'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/exec/sass_scss.rb:391:in `run'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/exec/sass_scss.rb:63:in `process_result'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/exec/base.rb:52:in `parse'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/exec/base.rb:19:in `parse!'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/bin/scss:13:in `<top (required)>'
-C:/Ruby23-x64/bin/scss:22:in `load'
-C:/Ruby23-x64/bin/scss:22:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"@include \": expected identifier, was \"\"../font/css/fo...\"\A         on line 3 of ke.scss\A \A 1: @charset \"UTF-8\";\A 2: \A 3: @include \"../font/css/font-awesome.min.css\";\A 4: html,body,ul,li,p,h1,h2,h3,h4,h5,hr{\A 5:     list-style: none;\A 6:     margin: 0;\A 7:     padding: 0;\A 8: }"; }
+* { outline: none; }
+
+a { text-decoration: none; }
+
+.container { width: 100%; max-width: 1560px; }
+.container * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+.fff { background: #fff; }
+
+.row:before, .row:after { content: ""; display: table; clear: both; }
+
+.row [class*='col-'] { float: left; min-height: 1px; padding: 12px; /* 设置间距 */ }
+.row .col-1 { width: 10%; }
+.row .col-2 { width: 20%; }
+.row .col-3 { width: 30%; }
+.row .col-4 { width: 40%; }
+.row .col-5 { width: 50%; }
+.row .col-6 { width: 60%; }
+.row .col-7 { width: 70%; }
+.row .col-8 { width: 80%; }
+.row .col-9 { width: 90%; }
+.row .col-10 { width: 100%; }
+
+.padding { padding: 10px; }
+
+.margin { margin: 10px; }
+
+.border { border: solid 1px #ddd; }
+
+.flex { display: -webkit-flex; display: -ms-flexbox; display: flex; background: #fff; text-align: center; border: solid 1px #ddd; }
+.flex li { padding: 10px; flex: auto; }
+.flex li + li { border-left: solid 1px #ddd; }
+
+.btn { display: inline-block; border: none; background: #fff; padding: 6px 18px 6px 18px; cursor: pointer; letter-spacing: 0.2em; transition: all 0.4s; }
+
+.btn-a { color: #fff; background: #0380EE; }
+.btn-a:hover { background: #038EEE; }
+
+.btn-b { color: #fff; background: #3BB4F2; }
+.btn-b:hover { background: #19A7F0; }
+
+.btn-c { color: #fff; background: #5EB95E; }
+.btn-c:hover { background: #4AAA4A; }
+
+.btn-d { color: #fff; background: #F37B1D; }
+.btn-d:hover { background: #E0690C; }
+
+.btn-e { color: #000; background: #E6E6E6; }
+.btn-e:hover { background: #D4D4D4; }
+
+.form-group { padding: 0 10px 0 10px; background: #fff; }
+.form-group .label { padding: 8px; display: inline-block; }
+.form-group .inline { display: inline-block; }
+
+.form-control .max { width: 100%; }
+.form-control .control { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 8px; color: #e08; display: inline-block; }
+.form-control .input { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 8px; display: inline-block; border: solid 1px #ddd; color: #e08; transition: all 0.4s; }
+.form-control .input:focus { border: solid 1px #19A7F0; }
+
+.card { border: solid 1px #ddd; background: #fff; }
+.card .card-head { font-weight: 800; padding: 10px; border-bottom: solid 1px #ddd; }
+.card .card-body { padding: 10px; }
+.card .card-foot { padding: 10px; border-top: solid 1px #ddd; }
+
+.i-red { color: #fff; background: #F37B1D; padding: 0 6px 0 6px; }
+
+.list { background: #fff; padding: 0 8px 0 8px; }
+.list .list-item { padding: 10px; }
+.list .list-item .right { float: right; }
+.list .list-item + .list-item { border-top: solid 1px #ddd; }
+
+.ke-tip { position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: #000; background: rgba(0, 0, 0, 0.7); z-index: 9999; }
+.ke-tip .dia { left: 0; top: 0; position: fixed; padding: 10px 0px 0px 0px; background: #fff; width: 300px; text-align: center; }
+.ke-tip .dia .ke-tip-title { padding: 0px 20px 0px 20px; margin: 0; padding: 0; text-align: center; font-size: 1.2rem; margin-bottom: 8px; }
+.ke-tip .dia .ke-tip-message { margin: 0; padding: 0; text-align: center; font-size: 1.0rem; }
+.ke-tip .dia .ke-tip-btn-group { margin-top: 10px; border-top: solid 1px #e3e3e3; display: -webkit-flex; display: -moz-flex; display: flex; display: -ms-flexbox; list-style: none; }
+.ke-tip .dia .ke-tip-btn-group li { flex: 1 1; text-align: center; }
+.ke-tip .dia .ke-tip-btn-group li + li { border-left: solid 1px #e3e3e3; }
+.ke-tip .dia .ke-tip-btn-group .btn { text-align: center; text-decoration: none; color: #0E90D2; width: auto; display: block; padding: 10px 20px 10px 20px; }
+
+/*# sourceMappingURL=ke.css.map */
